@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #ff5a3c;
+  --color-soft-primary: #f5dfdc;
+
+  --black-1: #071c1f;
+  --black-2: #233638;
+  --black-3: #071c1f;
+  --black-4: #242424;
+  --black-5: #171b2a;
+
+  --gray-1: #c4c4c4;
+  --gray-2: #9eabb2;
+  --gray-3: #899aa2;
+
+  --blue-1: #f2f6f7;
+  --blue-2: #a6b2d3;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
