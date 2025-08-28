@@ -387,6 +387,7 @@ nav a.active {
   width: 2.3rem;
   height: 2px;
   background-color: #ebebeb;
+  cursor: pointer;
 }
 
 .slider-dot .active-dot {
@@ -1327,6 +1328,7 @@ p {
   width: 100%;
   aspect-ratio: 1.5;
   background: #c4c4c4;
+  cursor: pointer;
 }
 
 .blog-content {
@@ -1362,6 +1364,8 @@ p {
   line-height: 100%;
   letter-spacing: 0;
   margin-bottom: 1.5rem;
+
+  cursor: pointer;
 }
 
 .blog-content p {
