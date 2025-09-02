@@ -906,6 +906,7 @@ p {
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
   background: #fff;
+  cursor: pointer;
 
   font-weight: 600;
   font-size: 1.6rem;
@@ -913,7 +914,7 @@ p {
 }
 
 .explore-btn:hover {
-  background: #f44336;
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -1282,13 +1283,15 @@ p {
 .btn-subscribe {
   background: var(--color-primary);
   color: #fff;
-  border: none;
+  border: 2px solid var(--color-primary);
   padding: 1.3rem 1.6rem;
   margin-left: 6px;
 }
 
 .btn-subscribe:hover {
-  background: #e63e3e;
+  background-color: var(--color-soft-primary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
 }
 
 .blog {
@@ -1427,7 +1430,8 @@ p {
 }
 
 .btn-read:hover {
-  background: #ff4d4d;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
   color: #fff;
 }
 
@@ -1847,7 +1851,7 @@ textarea {
   display: none;
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px) and (max-width: 1430px) {
   /* header */
   .right-header nav ul {
     gap: 2rem;
@@ -1862,7 +1866,8 @@ textarea {
   }
 
   .btn {
-    padding: 1.3rem 1.6rem;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
   }
 
   /* banner */
@@ -2856,14 +2861,16 @@ textarea {
   .btn-subscribe {
     background: var(--color-primary);
     color: #fff;
-    border: none;
+    border: 2px solid var(--color-primary);
     padding: 1rem 1.2rem;
     margin-left: 6px;
     font-size: 1rem;
   }
 
   .btn-subscribe:hover {
-    background: #e63e3e;
+    background-color: var(--color-soft-primary);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
   }
 
   /* blog */
