@@ -45,8 +45,9 @@ a {
 
 .top-bar .container {
   height: 100%;
-  width: 100%;
-  padding: 0 13.3% 0 12.6%;
+  max-width: 150rem;
+  padding: 0 3rem;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,8 +111,9 @@ a {
 } */
 
 .header-container {
-  margin: 1.2rem 0;
-  padding: 0 12.5%;
+  max-width: 150rem;
+  padding: 1.3rem 3rem;
+  margin: 0 auto;
   display: flex;
   height: 100%;
   justify-content: space-between;
@@ -132,7 +134,7 @@ a {
   gap: 4.5rem;
   height: 100%;
   padding: 1.2rem 0;
-  align-items: end;
+  align-items: center;
 }
 
 .right-header nav a {
@@ -146,22 +148,35 @@ a {
   display: flex;
   align-tems: center;
   gap: 9.4rem;
+  height: 100%;
 }
 
 nav a:hover,
 nav a.active {
   color: var(--color-primary);
-}
-
-nav a.active {
   text-underline-offset: 4px;
   text-decoration: underline var(--color-primary);
 }
 
+nav a.hover {
+  opacity: 0.8;
+}
+
 .auth-buttons {
   display: flex;
-  gap: 0.6rem;
+  gap: 3.52rem;
   align-items: center;
+}
+
+.auth-text {
+  color: var(--black-2);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.auth-text:hover {
+  opacity: 0.8;
 }
 
 .btn {
@@ -178,6 +193,7 @@ nav a.active {
   gap: 0.8rem;
   align-items: center;
   width: fit-content;
+  transition: width 0.5s ease-in-out, background-color 0.3s linear;
 }
 
 .btn-primary {
@@ -245,6 +261,12 @@ nav a.active {
 
 .hero-text {
   position: relative;
+  z-index: 0;
+}
+
+.hero-text h1 {
+  position: relative;
+  z-index: 2;
 }
 
 .find-vector {
@@ -252,6 +274,7 @@ nav a.active {
   position: absolute;
   top: 35%;
   right: 0%;
+  z-index: 1;
 }
 
 .text-banner p {
@@ -440,6 +463,7 @@ nav a.active {
 .commercial-item-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 4.5rem;
 }
 
 .commercial-item {
@@ -456,6 +480,9 @@ nav a.active {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .commercial-item h3 {
@@ -581,13 +608,15 @@ p {
   align-items: start;
 }
 
-.dream-space-item i {
-  font-size: 5.1rem;
-  color: var(--color-primary);
-}
-
 .dream-space-content p {
   font-size: 1.6rem;
+}
+
+.dream-space-text {
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
 }
 
 .dream-space-text h3 {
@@ -595,6 +624,7 @@ p {
   font-size: 2.4rem;
   letter-spacing: -1%;
   color: var(--black-1);
+  margin-top: 0.8rem;
 }
 
 .dream-space-text p {
@@ -661,6 +691,7 @@ p {
   width: 1.5rem;
   height: 1.1rem;
   background: var(--color-primary);
+  flex-shrink: 0;
 }
 
 .property-right {
@@ -763,6 +794,10 @@ p {
   margin-top: 0.8rem;
 }
 
+.service-card-text a:hover {
+  opacity: 0.8;
+}
+
 /* fearured properties */
 
 .featured-property {
@@ -810,6 +845,11 @@ p {
 
 .fp-tabs a.active {
   border-bottom: 2px solid var(--color-primary);
+}
+
+.fp-tabs a:hover {
+  border-bottom: 2px solid var(--color-primary);
+  opacity: 0.8;
 }
 
 .fp-grid {
@@ -887,13 +927,19 @@ p {
 .arrow-btn {
   background: #f44336;
   color: #fff;
-  border: none;
+  border: 2px solid var(--color-primary);
   padding: 1.6rem 2.6rem;
   cursor: pointer;
 }
 
 .arrow-btn i {
   font-size: 1.6rem;
+}
+
+.arrow-btn:hover {
+  background: var(--color-soft-primary);
+  color: var(--color-primary);
+  transition: width 0.5s ease-in-out, background-color 0.3s linear;
 }
 
 .fp-footer {
@@ -912,6 +958,7 @@ p {
   font-weight: 600;
   font-size: 1.6rem;
   font-family: "Nunito", sans-serif;
+  transition: width 0.5s ease-in-out, background-color 0.3s linear;
 }
 
 .explore-btn:hover {
@@ -1092,7 +1139,9 @@ p {
   height: 6rem;
   border-radius: 50%;
   cursor: pointer;
-  /* transition: 0.3s; */
+  transition: 0.3s;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
 }
 
 .arrow i {
@@ -1166,7 +1215,7 @@ p {
   height: 2.3rem;
 }
 
-.testimonial-text h4 {
+.testimonial-text h3 {
   font-family: "Poppins", sans-serif;
 
   font-weight: 500;
@@ -1334,13 +1383,13 @@ p {
   box-shadow: 0 16px 26px rgba(0, 0, 0, 0.07);
   overflow: hidden;
   text-align: left;
+  position: relative;
 }
 
 .blog-img {
   width: 100%;
   aspect-ratio: 1.5;
   background: #c4c4c4;
-  cursor: pointer;
 }
 
 .blog-content {
@@ -1367,7 +1416,7 @@ p {
   font-size: 1.2rem;
 }
 
-.blog-content h3 {
+.blog-content h3 a {
   font-family: "Nunito", sans-serif;
 
   font-size: 1.8rem;
@@ -1376,8 +1425,15 @@ p {
   line-height: 100%;
   letter-spacing: 0;
   margin-bottom: 1.5rem;
+}
 
-  cursor: pointer;
+.blog-content h3 a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .blog-content p {
@@ -1428,6 +1484,7 @@ p {
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 0;
+  position: relative;
 }
 
 .btn-read:hover {
@@ -1854,6 +1911,14 @@ textarea {
 
 @media (min-width: 1025px) and (max-width: 1430px) {
   /* header */
+
+  .top-bar .container {
+    padding: 0 3rem;
+  }
+
+  .header-container {
+    padding: 1.5rem 3rem;
+  }
   .right-header nav ul {
     gap: 2rem;
   }
@@ -1918,7 +1983,7 @@ textarea {
   }
 
   .property-section {
-    margin-top: 30rem;
+    margin-top: 35rem;
   }
 
   .dream-space-content {
@@ -1936,6 +2001,10 @@ textarea {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .top-bar {
+    display: none;
+  }
+
   .hamburger-menu {
     display: flex;
   }
@@ -2189,8 +2258,8 @@ textarea {
 
   .testimonial-image {
     position: relative;
-    width: 15rem;
-    height: 20rem;
+    width: 25rem;
+    height: 30rem;
   }
 
   .testimonial-text {
@@ -2208,7 +2277,7 @@ textarea {
     text-align: justify;
   }
 
-  .testimonial-text h4 {
+  .testimonial-text h3 {
     font-size: 2.2rem;
   }
   .testimonial-text small {
@@ -2599,8 +2668,8 @@ textarea {
     align-items: center;
   }
 
-  .dream-space-item i {
-    font-size: 4rem;
+  .dream-space-item svg {
+    font-size: 3rem;
   }
 
   .dream-space-text h3 {
@@ -2802,8 +2871,8 @@ textarea {
 
   .testimonial-image {
     position: relative;
-    width: 10rem;
-    height: 15rem;
+    width: 15rem;
+    height: 20rem;
   }
 
   .testimonial-text {
